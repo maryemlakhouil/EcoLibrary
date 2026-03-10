@@ -20,7 +20,6 @@ return new class extends Migration
             $table->date('date_acquisition')->nullable();
             $table->text('note_degradation')->nullable();
             $table->timestamp('date_degradation')->nullable();
-            $table->timestamps();
         });
     }
 

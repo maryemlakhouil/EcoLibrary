@@ -8,6 +8,7 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
+     * isbn:  l’identifiant bibliographique du livre 1234567890876
      */
     public function up(): void
     {
