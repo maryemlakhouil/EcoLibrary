@@ -14,6 +14,15 @@ return new class extends Migration
         Schema::create('livres', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->foreignId('categorie_id')->constrained('categories')->cascadeOnDelete();
+            $table->string('titre');
+            $table->string('slug')->unique();
+            $table->string('auteur');
+            $table->string('isbn')->nullable()->unique();
+            $table->text('description')->nullable();
+            $table->date('date_publication')->nullable();
+            $table->boolean('est_actif')->default(true);
+            $table->unsignedInteger('nombre_vues')->default(0);
         });
     }
 

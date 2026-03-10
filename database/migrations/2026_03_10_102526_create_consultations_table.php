@@ -14,6 +14,9 @@ return new class extends Migration
         Schema::create('consultations', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->foreignId('livre_id')->constrained('livres')->cascadeOnDelete();
+            $table->foreignId('user_id')->nullable()->constrained('users')->nullOnDelete();
+            $table->ipAddress('adresse_ip')->nullable();
         });
     }
 
