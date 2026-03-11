@@ -34,6 +34,8 @@ class AuthController extends Controller
             'token' => $token,
         ], 201);
     }
+    
+    // code HTTP pour création réussie
 
     public function login(Request $request)
     {
